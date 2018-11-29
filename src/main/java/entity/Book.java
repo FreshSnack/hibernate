@@ -1,5 +1,6 @@
 package entity;
 
+import org.hibernate.annotations.ColumnTransformer;
 import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
@@ -23,6 +24,10 @@ public class Book {
     @Column(name="LICENSE")
     private String license;
 
+    @Column(name="BOOK_TYPE")
+    @Enumerated(EnumType.STRING)
+    private BookType bookType;
+
     public String getName() {
         return name;
     }
@@ -45,5 +50,13 @@ public class Book {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public BookType getBookType() {
+        return bookType;
+    }
+
+    public void setBookType(BookType bookType) {
+        this.bookType = bookType;
     }
 }

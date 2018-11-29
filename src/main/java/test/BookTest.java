@@ -1,6 +1,7 @@
 package test;
 
 import entity.Book;
+import entity.BookType;
 import org.hibernate.Session;
 import org.junit.Test;
 import util.HibernateUtil;
@@ -18,7 +19,8 @@ public class BookTest {
 
         Book book = new Book();
         book.setName("精通Java");
-        book.setLicense("N83206");
+        book.setLicense("N83209");
+        book.setBookType(BookType.CHINA);
         session.beginTransaction();
         session.save(book);
         session.getTransaction().commit();
