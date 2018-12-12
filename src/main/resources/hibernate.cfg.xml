@@ -50,5 +50,8 @@
 
         <mapping class="entity.Book"/>
 
+        <mapping class="entity.Base"/>
+        <mapping class="entity.Item"/>
+
     </session-factory>
 </hibernate-configuration>
