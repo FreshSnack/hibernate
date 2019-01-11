@@ -36,13 +36,13 @@ public class Student implements Serializable {
     @ColumnTransformer(forColumn = "information", read = "upper(information)", write = "lower(?)")
     private String information1;
 
-    @org.hibernate.annotations.Type(type="entity.AddressType")
+    /*@org.hibernate.annotations.Type(type="entity.AddressType")
     @Columns(columns = {
             @Column(name = "homeAddr"),
             @Column(name = "workAddr")
     })
     @ColumnTransformer(forColumn = "workAddr", read = "upper(workAddr)", write = "lower(?)")
-    private AddressType addressType;
+   private AddressType addressType;*/
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Teacher teacher;
@@ -95,11 +95,4 @@ public class Student implements Serializable {
         this.information1 = information1;
     }
 
-    public AddressType getAddressType() {
-        return addressType;
-    }
-
-    public void setAddressType(AddressType addressType) {
-        this.addressType = addressType;
-    }
 }

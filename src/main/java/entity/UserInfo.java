@@ -24,8 +24,8 @@ public class UserInfo {
 
     //@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     //@JoinColumn(name = "USER_ID")
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "userInfo")
-    private User user;
+    /*@OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REMOVE}, mappedBy = "userInfo")
+    private User user;*/
 
     public Integer getId() {
         return id;
@@ -51,11 +51,11 @@ public class UserInfo {
         this.age = age;
     }
 
-    public User getUser() {
+   /* public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }
+    }*/
 }

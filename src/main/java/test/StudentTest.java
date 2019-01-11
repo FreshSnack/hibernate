@@ -1,6 +1,5 @@
 package test;
 
-import entity.AddressType;
 import entity.Student;
 import entity.Teacher;
 import org.hibernate.Session;
@@ -9,7 +8,6 @@ import org.hibernate.cfg.Configuration;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import sun.plugin2.os.windows.SECURITY_ATTRIBUTES;
 
 import java.util.Arrays;
 import java.util.List;
@@ -95,7 +93,7 @@ public class StudentTest {
         student.setName("zhangSan");
         student.setSage(10);
         student.setInformation1("IpQ");
-        student.setAddressType(new AddressType("hOmE","woRK"));
+        //student.setAddressType(new AddressType("hOmE","woRK"));
 
         /*Student student2 = new Student();
         student2.setName("张三");

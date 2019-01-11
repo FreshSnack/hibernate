@@ -53,5 +53,11 @@
         <mapping class="entity.Base"/>
         <mapping class="entity.Item"/>
 
+        <mapping class="entity.Pet"/>
+        <mapping class="entity.Person"/>
+
+        <mapping class="entity.MyRole"/>
+        <mapping class="entity.MyOrgan"/>
+        <mapping class="entity.MyUser"/>
     </session-factory>
 </hibernate-configuration>

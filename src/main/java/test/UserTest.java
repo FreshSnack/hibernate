@@ -48,7 +48,7 @@ public class UserTest {
         UserInfo userInfo = new UserInfo();
         userInfo.setAge(20);
         userInfo.setSex("man");
-        userInfo.setUser(user);
+        //userInfo.setUser(user);
 
         user.setUserInfo(userInfo);
 

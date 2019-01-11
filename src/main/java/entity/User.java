@@ -32,8 +32,10 @@ public class User {
     @Column(name = "PASSWORD")
     private String password;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "USER_INFO_ID")
+    //@Where(clause = "AGE > 10")
+    @WhereJoinTable(clause = "AGE > 10")
     private UserInfo userInfo;
 
     @Basic(fetch = FetchType.LAZY)
